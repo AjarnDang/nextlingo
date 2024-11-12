@@ -4,8 +4,8 @@ import { useLocale } from "next-intl";
 import { usePathname, useRouter } from "@/navigation";
 import { useParams } from "next/navigation";
 import { useTransition, ReactNode, ChangeEvent } from "react";
-// import { GlobalOutlined } from "@ant-design/icons";
-// import { Dropdown } from "flowbite-react";
+import { GlobalOutlined } from "@ant-design/icons";
+import { Dropdown } from "flowbite-react";
 
 type Props = {
   children: ReactNode;
@@ -22,32 +22,34 @@ export default function LocaleSwitcherSelect({
   const [isPending, startTransition] = useTransition();
   const pathname = usePathname();
   const params = useParams();
+  const currentLocale = useLocale();
 
-  function onSelectChange(event: ChangeEvent<HTMLSelectElement>) {
-    const nextLocale = event.target.value;
+  function onSelectChange(nextLocale: string) {
     startTransition(() => {
-      router.replace(
-        { pathname, params }, 
-        { locale: nextLocale }
-      );
+      router.replace({ pathname, params }, { locale: nextLocale });
     });
   }
 
+  const languageLabel = currentLocale === "en" ? "EN" : "TH";
+
   return (
-    <label
-      className={isPending && "transition-opacity [&:disabled]:opacity-30"}
+    <Dropdown
+      inline
+      arrowIcon={false}
+      label={
+        <div className="flex items-center">
+          <GlobalOutlined />
+          <span className="ml-2">{languageLabel}</span>
+        </div>
+      }
+      disabled={isPending}
     >
-      <p className="sr-only">{label}</p>
-      <select
-        name=""
-        id=""
-        defaultValue={defaultValue}
-        disabled={isPending}
-        onChange={onSelectChange}
-      >
-        { children }
-      </select>
-      <span className="pointer-events-none absolute right-2 top-[8px]"></span>
-    </label>
+      <Dropdown.Item onClick={() => onSelectChange("en")} disabled={isPending}>
+        English
+      </Dropdown.Item>
+      <Dropdown.Item onClick={() => onSelectChange("th")} disabled={isPending}>
+        Thai
+      </Dropdown.Item>
+    </Dropdown>
   );
 }

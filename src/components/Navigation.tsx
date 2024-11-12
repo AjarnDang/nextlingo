@@ -16,22 +16,22 @@ export default function Header() {
   const t = useTranslations("Navigation");
 
   return (
-    <Navbar fluid rounded>
-      <NavbarBrand href="/">
+    <Navbar fluid rounded className="bg-transparent">
+      <NavigationLink href="/">
         <Image src={Logo} width={50} height={50} alt="DABUZZZZ Logo" />
-      </NavbarBrand>
+      </NavigationLink>
 
       <NavbarCollapse>
         <NavigationLink href="/">{t("home")}</NavigationLink>
         <NavigationLink href="/service">{t("service")}</NavigationLink>
-        <NavigationLink href="#">{t("gallery")}</NavigationLink>
-        <NavigationLink href="#">{t("about")}</NavigationLink>
-        <NavigationLink href="#">{t("contact")}</NavigationLink>
+        <NavigationLink href="/gallery">{t("gallery")}</NavigationLink>
+        <NavigationLink href="/about">{t("about")}</NavigationLink>
+        <NavigationLink href="/contact">{t("contact")}</NavigationLink>
       </NavbarCollapse>
 
       <div className="flex md:order-2 gap-4">
         <LocalSwitcher />
-        <Button className="rounded-full">{t("book")}</Button>
+        <Button className="rounded-full bg-primary px-3">{t("book")}</Button>
         <NavbarToggle />
       </div>
     </Navbar>

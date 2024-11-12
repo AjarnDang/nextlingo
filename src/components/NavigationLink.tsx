@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import { Link } from '@/navigation';
-import { LinkProps } from 'next/link';
-import { usePathname } from 'next/navigation';
-import { ReactNode } from 'react';
+import { Link } from "@/navigation";
+import { LinkProps } from "next/link";
+import { usePathname } from "next/navigation";
+import { ReactNode } from "react";
 
 export default function NavigationLink({
   href,
@@ -11,7 +11,7 @@ export default function NavigationLink({
   ...rest
 }: LinkProps & { children: ReactNode }) {
   const pathname = usePathname();
-  const isActive = pathname === href;
+  const isActive = pathname === href || pathname.startsWith(`${href}/`);
 
   return (
     <Link

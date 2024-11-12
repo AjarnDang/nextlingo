@@ -2,3 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --primary: #36a050;
+  --primary-100: #d7ecdc;
+  --primary-200: #57ee7d;
+  --text: #333333;
+  --white: #fbfbfb;
+}
+body {
+  background-color: var(--white);
+  color: var(--text);
+}
+.bg-primary {
+  background-color: var(--primary);
+}
+
+.border-primary {
+    border-color: var(--primary);
+  }
+.text-primary {
+  color: var(--primary);
+}
+.text-white {
+  color: var(--white);
+}

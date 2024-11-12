@@ -1,13 +1,17 @@
 import type { Metadata } from "next";
 import Header from "@/components/Navigation";
-import Footer from "@/components/footer";
+import FooterMain from "@/components/Footer";
 
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, getTranslations } from "next-intl/server";
-import { Inter } from "next/font/google";
+import { Inter, IBM_Plex_Sans_Thai } from "next/font/google";
 import { ReactNode } from "react";
 import "./globals.css";
-const inter = Inter({ subsets: ["latin"] });
+// const inter = Inter({ subsets: ["latin"] });
+const IBM = IBM_Plex_Sans_Thai({
+  subsets: ["latin", "thai"],
+  weight: ["400", "500", "700"],
+});
 
 export const metadata: Metadata = {
   title: "DABUZZZZ",
@@ -28,11 +32,11 @@ export default async function RootLayout({
   return (
     <NextIntlClientProvider messages={messages}>
       <html lang={locale}>
-        <body className={inter.className}>
+        <body className={`${IBM.className}`}>
           <div className="flex flex-col min-h-screen mx-auto">
             <Header />
             <div className="flex-grow mt-20 mx-60">{children}</div>
-            <Footer />
+            <FooterMain />
           </div>
         </body>
       </html>

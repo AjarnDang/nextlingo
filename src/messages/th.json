@@ -22,6 +22,9 @@
     "locale": "{locale, select, en {English} th {Thai} other {Unknow}}"
   },
   "Footer": {
-    "copyright": "สงวนลิขสิทธิ์.© DaBuzzzz 2024."
+    "copyright": "สงวนลิขสิทธิ์® DaBuzzzz Style Studio, 2024.",
+    "term": "กฎและเงื่อนใข",
+    "cookie": "คุ้กกี้",
+    "contact":  "ติดต่อ"
   }
 }

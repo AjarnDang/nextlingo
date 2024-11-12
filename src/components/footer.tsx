@@ -1,11 +1,20 @@
-import { useTranslations } from 'next-intl';
+"use client";
 
-export default function Footer() {
-  const t = useTranslations('Footer');
+import { useTranslations } from "next-intl";
+import NavigationLink from "./NavigationLink";
+import { Footer } from "flowbite-react";
+
+export default function FooterMain() {
+  const t = useTranslations("Footer");
 
   return (
-    <div className='my-10 text-center'>
-      <p>{t('copyright')}</p>
-    </div>
+    <Footer container className="bg-transparent border-none shadow-none">
+      <Footer.Copyright href="#" by={t("copyright")} />
+      <Footer.LinkGroup className="flex gap-6">
+        <NavigationLink href="#">{t("term")}</NavigationLink>
+        <NavigationLink href="#">{t("cookie")}</NavigationLink>
+        <NavigationLink href="#">{t("contact")}</NavigationLink>
+      </Footer.LinkGroup>
+    </Footer>
   );
 }
