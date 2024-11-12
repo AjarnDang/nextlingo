@@ -1,9 +1,10 @@
 import { useTranslations } from "next-intl";
-import LocalSwitcher from "./local-switcher";
+import LocalSwitcher from "./LocaleSwitcher";
+import NavigationLink from "./NavigationLink";
+
 import Image from "next/image";
 import {
   Button,
-  NavbarLink,
   Navbar,
   NavbarCollapse,
   NavbarBrand,
@@ -19,15 +20,13 @@ export default function Header() {
       <NavbarBrand href="/">
         <Image src={Logo} width={50} height={50} alt="DABUZZZZ Logo" />
       </NavbarBrand>
-      
+
       <NavbarCollapse>
-        <NavbarLink href="/" active>
-          {t("home")}
-        </NavbarLink>
-        <NavbarLink href="#">{t("service")}</NavbarLink>
-        <NavbarLink href="#">{t("gallery")}</NavbarLink>
-        <NavbarLink href="#">{t("about")}</NavbarLink>
-        <NavbarLink href="#">{t("contact")}</NavbarLink>
+        <NavigationLink href="/">{t("home")}</NavigationLink>
+        <NavigationLink href="/service">{t("service")}</NavigationLink>
+        <NavigationLink href="#">{t("gallery")}</NavigationLink>
+        <NavigationLink href="#">{t("about")}</NavigationLink>
+        <NavigationLink href="#">{t("contact")}</NavigationLink>
       </NavbarCollapse>
 
       <div className="flex md:order-2 gap-4">

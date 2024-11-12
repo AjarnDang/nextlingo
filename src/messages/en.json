@@ -3,6 +3,10 @@
     "title": "next-intl example",
     "description": "Welcome to the Next.js Internationalization (i18n) example! This demo showcases the power of the App Router and how to manage multilingual content seamlessly using next-intl."
   },
+  "AboutPage": {
+    "title": "About page",
+    "description": "Description..."
+  },
   "NotFoundPage": {
     "title": "Page Not Found",
     "description": "Oops! It seems like you've stumbled upon a page that doesn't exist. Don't worry, our internationalization magic is still hard at work on other parts of the app. Feel free to navigate back to explore more!"
@@ -13,7 +17,9 @@
     "gallery": "Gallery",
     "about": "About us",
     "contact": "Contact",
-    "book": "Book now"
+    "book": "Book now",
+    "label": "EN",
+    "locale": "{locale, select, th {Thai} en {English} other {Unknow}}"
   },
   "Footer": {
     "copyright": "© 2024 DaBuzzzz. All rights reserved."
