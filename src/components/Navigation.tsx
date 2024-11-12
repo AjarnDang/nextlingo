@@ -16,7 +16,7 @@ export default function Header() {
   const t = useTranslations("Navigation");
 
   return (
-    <Navbar fluid rounded className="bg-transparent">
+    <Navbar fluid rounded className="bg-transparent fixed top-0 left-0 w-full z-50">
       <NavigationLink href="/">
         <Image src={Logo} width={50} height={50} alt="DABUZZZZ Logo" />
       </NavigationLink>

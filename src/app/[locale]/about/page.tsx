@@ -1,7 +1,13 @@
-import React from 'react'
+import React from "react";
+import { useTranslations } from "next-intl";
 
 export default function About() {
+  const t = useTranslations("IndexPage");
+
   return (
-    <div>About us</div>
-  )
+    <div>
+      <h1 className="text-4xl mb-4 font-semibold">{t("title")}</h1>
+      <p>{t("description")}</p>
+    </div>
+  );
 }

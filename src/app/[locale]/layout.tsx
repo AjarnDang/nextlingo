@@ -35,7 +35,7 @@ export default async function RootLayout({
         <body className={`${IBM.className}`}>
           <div className="flex flex-col min-h-screen mx-auto">
             <Header />
-            <div className="flex-grow mt-20 mx-60">{children}</div>
+              <div className="flex-grow py-4 lg:px-60 px-4">{children}</div>
             <FooterMain />
           </div>
         </body>
