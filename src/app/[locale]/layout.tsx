@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
-import Header from "@/components/Navigation";
-import FooterMain from "@/components/Footer";
+import PageLayout from "@/components/PageLayout";
 
 import { NextIntlClientProvider } from "next-intl";
-import { getMessages, getTranslations } from "next-intl/server";
+import { getMessages } from "next-intl/server";
 import { Inter, IBM_Plex_Sans_Thai } from "next/font/google";
 import { ReactNode } from "react";
 import "./globals.css";
@@ -33,11 +32,7 @@ export default async function RootLayout({
     <NextIntlClientProvider messages={messages}>
       <html lang={locale}>
         <body className={`${IBM.className}`}>
-          <div className="flex flex-col min-h-screen mx-auto">
-            <Header />
-              <div className="flex-grow py-4 lg:px-60 px-4">{children}</div>
-            <FooterMain />
-          </div>
+          <PageLayout>{children}</PageLayout>
         </body>
       </html>
     </NextIntlClientProvider>

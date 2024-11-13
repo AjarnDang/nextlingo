@@ -33,3 +33,11 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+.shadow-theme {
+  box-shadow: 20px 20px rgb(54, 160, 80, 0.45);
+}
+
+.custom-min-h {
+  min-height: calc(100vh - 68px);
+}

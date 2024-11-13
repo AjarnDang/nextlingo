@@ -13,11 +13,17 @@ export default function NavigationLink({
   const pathname = usePathname();
   const isActive = pathname === href || pathname.startsWith(`${href}/`);
 
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    window.location.href = href;
+  };
+
   return (
     <Link
       aria-current={isActive ? "page" : undefined}
       className={isActive ? "text-green-600" : "text-gray-800"}
       href={href}
+      onClick={handleClick}
       {...rest}
     >
       {children}
