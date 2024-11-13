@@ -4,8 +4,18 @@
     "book": "Book now"
   },
   "AboutPage": {
-    "title": "About page",
-    "description": "Description..."
+    "title": "About us",
+    "title_1": "Who we are",
+    "who_are_we_1": "Welcome to Dabuzzzz Style Studio, where every cut, color, and style is crafted with passion and precision! We are a full-service hair studio dedicated to the art of modern barbering and hairstyling, offering a personalized experience that combines high-quality techniques with a fresh, trendy approach.",
+    "who_are_we_2": "Our talented team of stylists and barbers are committed to helping you look and feel your best. From classic cuts to the latest styles, fades, beard grooming, and color treatments, we create looks that suit your lifestyle and reflect your personality. At Dabuzzzz, we believe that a great hairstyle is more than just a look—it’s confidence, expression, and individuality.",
+    "who_are_we_3": "Located in the heart of the community, Dabuzzzz Style Studio is a welcoming space where everyone can feel at home. Our mission is simple: to provide exceptional hair care and styling in an environment that’s both comfortable and inspiring. We pride ourselves on our attention to detail, creativity, and a strong connection with our clients, ensuring that every visit to Dabuzzzz leaves you buzzing with satisfaction.",
+    "who_are_we_4": "Step into Dabuzzzz Style Studio and let us bring your vision to life.",
+    "title_2": "Where are we",
+    "address_1": "Klangsadan, Around Bueng Nong Wang.",
+    "addesss_2": "135/42, Moo 14, Nai Muang, Muang Khon Kaen, Khon Kaen, Thailand, 40000",
+    "title_3": "Operating Hour",
+    "date": "MON to SUN",
+    "time": "at 10:00 AM. - 07:00 PM."
   },
   "NotFoundPage": {
     "title": "Page Not Found",

@@ -7,7 +7,7 @@ import { useTranslations } from "next-intl";
 import { Button } from "flowbite-react";
 
 export default function About() {
-  const t = useTranslations("IndexPage");
+  const t = useTranslations("AboutPage");
 
   return (
     <div>
@@ -36,7 +36,7 @@ export default function About() {
           <div className="flex items-center lg:col-span-3 lg:justify-start lg:text-start sm:justify-center justify-center sm:text-center text-center">
             <div>
               <h1 className="text-2xl mb-4 font-medium text-white uppercase">
-                About us -
+                {t('title')} -
               </h1>
               <div className="lg:text-[8rem] text-[5rem] lg:leading-[8rem] leading-[5rem] text-primary">
                 <DabuzzzText />
@@ -50,7 +50,7 @@ export default function About() {
       </section>
 
       <section className="relative lg:mt-64 md:mt-24 sm:mt-24 mt-24 mb-16">
-        <h1 className="text-xl font-semibold mb-4">WHO ARE WE ?</h1>
+        <h1 className="text-xl font-semibold mb-4">{t('title_1')} ?</h1>
         <p className="mb-4">
           Welcome to Dabuzzzz Style Studio, where every cut, color, and style is
           crafted with passion and precision! We are a full-service hair studio
