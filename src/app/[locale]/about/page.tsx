@@ -36,7 +36,7 @@ export default function About() {
           <div className="flex items-center lg:col-span-3 lg:justify-start lg:text-start sm:justify-center justify-center sm:text-center text-center">
             <div>
               <h1 className="text-2xl mb-4 font-medium text-white uppercase">
-                {t('title')} -
+                {t("title")} -
               </h1>
               <div className="lg:text-[8rem] text-[5rem] lg:leading-[8rem] leading-[5rem] text-primary">
                 <DabuzzzText />
@@ -50,34 +50,11 @@ export default function About() {
       </section>
 
       <section className="relative lg:mt-64 md:mt-24 sm:mt-24 mt-24 mb-16">
-        <h1 className="text-xl font-semibold mb-4">{t('title_1')} ?</h1>
-        <p className="mb-4">
-          Welcome to Dabuzzzz Style Studio, where every cut, color, and style is
-          crafted with passion and precision! We are a full-service hair studio
-          dedicated to the art of modern barbering and hairstyling, offering a
-          personalized experience that combines high-quality techniques with a
-          fresh, trendy approach.
-        </p>
-        <p className="mb-4">
-          Our talented team of stylists and barbers are committed to helping you
-          look and feel your best. From classic cuts to the latest styles,
-          fades, beard grooming, and color treatments, we create looks that suit
-          your lifestyle and reflect your personality. At Dabuzzzz, we believe
-          that a great hairstyle is more than just a look—it’s confidence,
-          expression, and individuality.
-        </p>
-        <p className="mb-4">
-          Located in the heart of the community, Dabuzzzz Style Studio is a
-          welcoming space where everyone can feel at home. Our mission is
-          simple: to provide exceptional hair care and styling in an environment
-          that’s both comfortable and inspiring. We pride ourselves on our
-          attention to detail, creativity, and a strong connection with our
-          clients, ensuring that every visit to Dabuzzzz leaves you buzzing with
-          satisfaction.
-        </p>
-        <p className="mb-4">
-          Step into Dabuzzzz Style Studio and let us bring your vision to life.
-        </p>
+        <h1 className="text-xl font-semibold mb-4">{t("title_1")} ?</h1>
+        <p className="mb-4">{t("who_are_we_1")}</p>
+        <p className="mb-4">{t("who_are_we_2")}</p>
+        <p className="mb-4">{t("who_are_we_3")}</p>
+        <p className="mb-4">{t("who_are_we_4")}</p>
       </section>
 
       <section>
@@ -85,20 +62,17 @@ export default function About() {
           <div className="lg:col-span-1 md:col-span-1 col-auto">
             <div className="lg:mb-16 mb-16">
               <h1 className="text-xl font-semibold mb-4 uppercase">
-                WHERE WE ARE ?
+                {t("title_2")} ?
               </h1>
-              <i>Klangsadan, Around Bueng Nong Wang.</i>
-              <p>
-                135/42, Moo 14, Nai Muang, Muang Khon Kaen, Khon Kaen, Thailand,
-                40000
-              </p>
+              <i>{t("address_1")}</i>
+              <p>{t("address_2")}</p>
             </div>
             <div className="lg:mb-0 mb-12">
               <h1 className="text-xl font-semibold mb-4 uppercase">
-                OPERATING HOUR
+                {t("title_3")}
               </h1>
-              <p>MON to SUN</p>
-              <p className="mb-4">at 10:00 - 19:00</p>
+              <p>{t("date")}</p>
+              <p className="mb-4">{t("time")}</p>
               <Button className="rounded-full bg-primary px-4">
                 {t("book")}
               </Button>

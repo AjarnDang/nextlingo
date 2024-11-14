@@ -9,6 +9,7 @@ import Image from "next/image";
 import {
   Button,
   Navbar,
+  Dropdown,
   NavbarCollapse,
   NavbarToggle,
 } from "flowbite-react";
@@ -29,13 +30,14 @@ export default function Header() {
   }, []);
 
   useEffect(() => {
-    const mediaQuery = window.matchMedia("(max-width: 768px)"); 
+    const mediaQuery = window.matchMedia("(max-width: 768px)");
     const handleScreenSizeChange = (e) => setIsMediumScreen(e.matches);
 
     setIsMediumScreen(mediaQuery.matches);
     mediaQuery.addEventListener("change", handleScreenSizeChange);
 
-    return () => mediaQuery.removeEventListener("change", handleScreenSizeChange);
+    return () =>
+      mediaQuery.removeEventListener("change", handleScreenSizeChange);
   }, []);
 
   const pathname = usePathname();
@@ -52,9 +54,8 @@ export default function Header() {
         ${isAboutPage && !scrolled && isMediumScreen ? "text-gray-800" : ""}
       `}
     >
-      
       <NavigationLink href="/home">
-        <Image src={Logo} width={50} height={50} alt="DABUZZZZ Logo" />
+        <Image src={Logo} width={50} height={50} alt="DABUZZZZ Logo" className="cursor-pointer" />
       </NavigationLink>
 
       <div className="flex md:order-2 gap-4">
@@ -62,7 +63,7 @@ export default function Header() {
         <Button className="rounded-full bg-primary lg:flex md:flex hidden px-3">
           {t("book")}
         </Button>
-        <NavbarToggle className="md:bg-transparent sm:bg-white bg-white" />
+        <NavbarToggle className="md:bg-transparent sm:bg-white bg-white cursor-pointer" />
       </div>
 
       <NavbarCollapse className="lg:bg-transparent md:bg-transparent sm:bg-white sm:text-center text-center md:leading-none leading-10 bg-white lg:p-0 lg:my-0 md:my-4 my-4 rounded-lg p-2">
@@ -76,7 +77,7 @@ export default function Header() {
                     : "text-slate-50"
                   : "text-gray-800"
               }
-            `}
+             cursor-pointer`}
           >
             {t("home")}
           </span>
@@ -87,7 +88,7 @@ export default function Header() {
               isAboutPage && !scrolled && !isMediumScreen
                 ? "text-slate-50"
                 : "text-gray-800"
-            }`}
+            } cursor-pointer`}
           >
             {t("service")}
           </span>
@@ -98,29 +99,54 @@ export default function Header() {
               isAboutPage && !scrolled && !isMediumScreen
                 ? "text-slate-50"
                 : "text-gray-800"
-            }`}
+            } cursor-pointer`}
           >
             {t("gallery")}
           </span>
         </NavigationLink>
-        <NavigationLink href="/about">
-          <span
-            className={`${
-              isAboutPage && !scrolled && !isMediumScreen
-                ? "text-slate-50"
-                : "text-gray-800"
-            }`}
-          >
-            {t("about")}
-          </span>
-        </NavigationLink>
+        <div className="custom-dropdown w-full md:w-auto flex justify-center cursor-pointer">
+        <Dropdown
+          arrowIcon={true}
+          inline
+          label={t("about")}
+          className="md:w-auto sm:w-full w-full"
+        >
+          <Dropdown.Item>
+            <NavigationLink href="/about">
+              <span
+                className={`${
+                  isAboutPage && !scrolled && !isMediumScreen
+                    ? "text-slate-50"
+                    : "text-gray-800"
+                } cursor-pointer`}
+              >
+                {t("about")}
+              </span>
+            </NavigationLink>
+          </Dropdown.Item>
+          <Dropdown.Item>
+            <NavigationLink href="/testimonials">
+              <span
+                className={`${
+                  isAboutPage && !scrolled && !isMediumScreen
+                    ? "text-slate-50"
+                    : "text-gray-800"
+                } cursor-pointer`}
+              >
+                {t("testimonials")}
+              </span>
+            </NavigationLink>
+          </Dropdown.Item>
+        </Dropdown>
+        </div>
+
         <NavigationLink href="/contact">
           <span
             className={`${
               isAboutPage && !scrolled && !isMediumScreen
                 ? "text-slate-50"
                 : "text-gray-800"
-            }`}
+            } cursor-pointer`}
           >
             {t("contact")}
           </span>

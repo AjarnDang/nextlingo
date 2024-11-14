@@ -12,10 +12,28 @@
     "who_are_we_4": "Step into Dabuzzzz Style Studio and let us bring your vision to life.",
     "title_2": "Where are we",
     "address_1": "Klangsadan, Around Bueng Nong Wang.",
-    "addesss_2": "135/42, Moo 14, Nai Muang, Muang Khon Kaen, Khon Kaen, Thailand, 40000",
+    "address_2": "135/42, Moo 14, Nai Muang, Muang Khon Kaen, Khon Kaen, Thailand, 40000",
     "title_3": "Operating Hour",
     "date": "MON to SUN",
-    "time": "at 10:00 AM. - 07:00 PM."
+    "time": "at 10:00 AM. - 07:00 PM.",
+    "book": "Book now"
+  },
+  "GalleryPage": {
+    "title": "Gallery"
+  },
+  "ContactPage": {
+    "title": "Get in touch with",
+    "tel": "Tel.",
+    "open": "Open",
+    "date": "MON to SUN",
+    "time": "at 10:00 AM. - 07:00 PM.",
+    "facility": "Facilities",
+    "facilities": {
+      "carPark": "Car Park",
+      "waitingArea": "Waiting Area",
+      "restRoom": "Rest Room"
+    },
+    "follow": "Follow us"
   },
   "NotFoundPage": {
     "title": "Page Not Found",
@@ -26,15 +44,16 @@
     "service": "Service",
     "gallery": "Gallery",
     "about": "About us",
+    "testimonials": "Reviews",
     "contact": "Contact",
     "book": "Book now",
     "label": "EN",
-    "locale": "{locale, select, th {Thai} en {English} other {Unknow}}"
+    "locale": "{locale, select, th {ไทย} en {English} other {Unknow}}"
   },
   "Footer": {
     "copyright": "All Right Reserve® Dabuzzzz Style Studio, 2024",
     "term": "Term & Conditions",
     "cookie": "Cookies",
-    "contact":  "Contact us"
+    "contact": "Contact us"
   }
 }

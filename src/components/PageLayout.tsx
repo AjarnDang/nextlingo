@@ -3,14 +3,19 @@
 import { usePathname } from "next/navigation";
 import { ReactNode } from "react";
 import Header from "@/components/Navigation";
+import DabuzzzText from "./DabuzzzText";
 import FooterMain from "@/components/Footer";
 
 export default function PageLayout({ children }: { children: ReactNode }) {
   const pathname = usePathname();
-  const isHomePage = pathname === "/en/home" || pathname === "/th/home";
+  const isHomePage =
+    pathname === "/en/home" ||
+    pathname === "/th/home" ||
+    pathname === "/th" ||
+    pathname === "/en";
 
   return (
-    <div className={isHomePage ? "bg-[#D7ECDC]" : ""}>
+    <div className={isHomePage ? "bg-[#F4F8F3]" : ""}>
       <Header />
 
       <div

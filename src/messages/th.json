@@ -12,10 +12,28 @@
     "who_are_we_4": "ก้าวเข้ามาที่ Dabuzzzz Style Studio แล้วให้เราสร้างสรรค์สไตล์ของคุณให้เป็นจริง",
     "title_2": "เราตั้งอยู่ที่ไหน",
     "address_1": "กังสดาล บริเวณรอบบึงหนองแวง",
-    "addesss_2": "135/42 หมู่ 14 ในเมือง อำเภอเมืองขอนแก่น ขอนแก่น ประเทศไทย 40000",
+    "address_2": "135/42 หมู่ 14 ตำบลในเมือง อำเภอเมืองขอนแก่น จังหวัดขอนแก่น ประเทศไทย 40000",
     "title_3": "เวลาเปิดทำการ",
     "date": "จันทร์ ถึง อาทิตย์",
-    "time": "เวลา 10:00 น. - 19:00 น."
+    "time": "เวลา 10:00 น. - 19:00 น.",
+    "book": "จองคิว"
+  },
+  "GalleryPage": {
+    "title": "แกลเลอรี่"
+  },
+  "ContactPage": {
+    "title": "ติดต่อเรา",
+    "tel": "โทร",
+    "open": "เปิดทำการ",
+    "date": "จันทร์ ถึง อาทิตย์",
+    "time": "เวลา 10:00 น. - 19:00 น.",
+    "facility": "สิ่งอำนวยความสะดวก",
+    "facilities": {
+      "carPark": "ที่จอดรถ",
+      "waitingArea": "พื้นที่รอ",
+      "restRoom": "ห้องน้ำ"
+    },
+    "follow": "ติดตามเรา"
   },
   "NotFoundPage": {
     "title": "ผิดพลาด รหัส 404 ไม่พบหน้าที่คุณต้องการ",
@@ -26,15 +44,16 @@
     "service": "บริการ",
     "gallery": "แกลเลอรี่",
     "about": "เกี่ยวกับเรา",
+    "testimonials": "รีวิว",
     "contact": "ติดต่อ",
     "book": "จองคิว",
     "label": "TH",
-    "locale": "{locale, select, en {English} th {Thai} other {Unknow}}"
+    "locale": "{locale, select, en {English} th {ไทย} other {Unknow}}"
   },
   "Footer": {
     "copyright": "สงวนลิขสิทธิ์® DaBuzzzz Style Studio, 2024.",
     "term": "กฎและเงื่อนใข",
     "cookie": "คุ้กกี้",
-    "contact":  "ติดต่อ"
+    "contact": "ติดต่อ"
   }
 }
